@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<style>
+  body{
+    font-size: 16px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    /* line-height: 16px; */
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .certificate {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    background-color:#D6F1F4;
+    height: 20% !important;
+    line-height: 10px;
+    /* border: 2px solid red; */
+  }
+
+  .certificate-info{
+    /* background-color: #5E6886; */
+    /* width: 50%; */
+    /* position: absolute;
+    left: 0;
+    z-index: 2; */
+    padding: 20px;
+    width: 100%;
+    border: 1px solid red;
+    background-image: url("assets/ce60f627-67b5-4d84-aecc-ab41017f3d3c.png");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .certificate-img{
+    /* width: 50%; */
+    /* position: absolute;
+    right: 0;
+    z-index: 1; */
+    max-height: 200px;
+
+    /* background-image: url("assets/ce60f627-67b5-4d84-aecc-ab41017f3d3c.png"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: contain; */
+  }
+
+  /* .certificate-img>img{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  } */
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .information {
+    background-color: azure;
+    height: 60%;
+    padding: 24px 0px;
+  }
+
+  .grapty-informatio {
+    background-color: bisque;
+    height: 20%;
+  }
+
+</style>
+<html>
+
+<body>
+
+<!-- Container -->
+  <div class="container">
+<!-- 
+    <div style="background-color: #D6F1F4;
+    padding: 16px 8px;
+    /* margin: 16px; */
+    width: 100%;
+    top: 0px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;"> -->
+
+    <!-- Certificado -->
+    <div class="certificate">
+
+      <div class="certificate-info">
+        <!--       
+       style="background-color: transparent;
+       width: 60%;
+       position: absolute;
+       height: 300px;
+       z-index: 3;" -->
+        <h1> Certificado con </h1>
+        <h1 style="font-size: 80px;"> $ {{price}}</h1>
+        <div style="
+                background-color: #62ADD0; 
+                border-radius: 20px;
+                width: 50%;
+                text-align: center;
+                height: fit-content;
+                ">
+          <p> <strong> Son {{points}} puntos </strong> </p>
+        </div>
+      </div>
+
+      <!-- style="
+       width: 50%;
+       height: 300px;
+       position: absolute;
+       z-index: 2;
+       right: 0px; -->
+      <!-- <div class="certificate-img"> -->
+        <!-- <img src="assets/ce60f627-67b5-4d84-aecc-ab41017f3d3c.png" width="100%" height="80%" /> -->
+      <!-- </div> -->
+
+    </div>
+
+    <!-- Informacion -->
+    <!-- style="padding: 24px 0px;" -->
+    <div class="information">
+      <div style="border: 2px solid gray; 
+       border-radius: 8px;
+       padding: 0px 8px">
+        <p> Código del certificado</p>
+        <p style="font-weight: bolder; 
+       font-size: 20px;">
+          <strong> {{certificadeCode}} </strong>
+        </p>
+      </div>
+      <div style="color: #5E6886;">
+        <p><strong> Vadido hasta el {{expirationDate}} </strong></p>
+        <p><strong> Canjéalo al pagar en la app de Volaris o en www.volaris.com </strong></p>
+        <p> Este certificado no puede ser usado para pagar conceptos de impuestos. Consulta terminos y condiciones en
+          <strong> www.volaris.com/TyC <strong> </strong>
+        </p>
+      </div>
+      <div>
+        <h1> ¿Cómo usar el Certificado? </h1>
+        <ol>
+          <li> Copia el codigo del certificado</li>
+          <li> Entra en la app p página web de Volaris</li>
+          <li> Elige el proximo destino y vuelos</li>
+          <li> Pega el código antes de terminar la compra al elegir el metodo de pago</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Grapty Information -->
+    <div class="grapty-informatio">
+      {{ graptyContent}}
+    </div>
+  </div>
+
+</body>
+
+</html>

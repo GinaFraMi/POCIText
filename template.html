@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 20px;
+      font-family: "Arial Rounded MT Bold";
+    }
+
+    p {
+      font-weight: 100;
+    }
+
+    header {
+      display: flex;
+      background-color: #D6F1F4;
+      color: black;
+      padding: 20px;
+      border-radius: 20px 20px 0px 90px;
+    }
+
+    .header-left {
+      position: absolute;
+      z-index: 1;
+      padding: 20px;
+      width: 80%;
+    }
+
+    .header-left h1 {
+      font-size: 30px;
+    }
+
+    .certificate-points {
+      background-color: #62ADD0;
+      padding: 4px;
+      border-radius: 20px;
+      width: 50%;
+      text-align: center;
+      height: fit-content;
+      margin-top: 16px;
+    }
+
+    .header-right {
+      margin-left: auto;
+      width: 30%;
+      right: 0;
+    }
+
+    .header-right img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .certificate-code {
+      border: 2px solid gray;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .certificate-information p {
+      color: #5E6886;
+      padding-top: 16px;
+      font-family: "Motley Forces";
+    }
+
+    .certificate-how-to-use {
+      font-weight: 100;
+    }
+
+    .certificate-how-to-use li {
+      padding-bottom: 4px;
+      padding-top: 4px;
+    }
+
+    @page {
+      size: 8.5in 9in;
+      margin: 4px;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Certificado-Volaris</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <section>
+        <h1> Certificado con </h1>
+        <h1 style="font-size: 80px;"> $ {{price}}</h1>
+        <div class="certificate-points">
+          <p> <strong> Son {{points}} puntos </strong> </p>
+        </div>
+      </section>
+    </div>
+    <div class="header-right">
+      <img src="./assets/ce60f627-67b5-4d84-aecc-ab41017f3d3c.png" alt="Imagen derecha">
+    </div>
+  </header>
+
+  <main>
+    <!-- <section> -->
+    <div class="certificate-code">
+      <p> Código del certificado</p>
+      <p style="font-size: 20px;">
+        <strong> {{certificadeCode}} </strong>
+      </p>
+    </div>
+    <!-- </section> -->
+    <section>
+      <div class="certificate-information">
+        <p><strong> Vadido hasta el {{expirationDate}} </strong></p>
+        <p><strong> Canjéalo al pagar en la app de Volaris o en www.volaris.com </strong></p>
+        <p> Este certificado no puede ser usado para pagar conceptos de impuestos. Consulta terminos y condiciones en
+          <strong> www.volaris.com/TyC <strong> </strong>
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="certificate-how-to-use">
+        <h1> ¿Cómo usar el Certificado? </h1>
+        <ol>
+          <li> Copia el codigo del certificado</li>
+          <li> Entra en la app p página web de Volaris</li>
+          <li> Elige el proximo destino y vuelos</li>
+          <li> Pega el código antes de terminar la compra al elegir el metodo de pago</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contenido dinámico del footer...</p>
+  </footer>
+</body>
+
+</html>
